@@ -1,0 +1,29 @@
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.header {
+    padding-top: 5px;
+}
+
+input, textarea {
+    border:1px solid #ccc;
+    min-height:30px;
+    outline: none;
+}
+
+textarea {
+    margin-bottom:15px;
+    margin-top:5px;
+    height: 200px;
+    width:250px;
+}
+
+label {
+    display:block;
+}
+
+button {
+    padding:6px;
+}

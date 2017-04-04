@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Lalamove Case Study</title>
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body onload="ordersList()">
+
+<div class="header">
+    <h1>Demo Control Panel</h1>
+
+    <button id="reset">Reset</button>
+    <button id="gen">Generate Orders</button>
+    <button id="remove">Remove an Order</button>
+
+    <h1>Orders</h1>
+    <script>
+        $('#reset').click(function() {
+            reset().then(ordersList).then(driverPaths);
+            $('#removedOrder').text("");
+            return false;
+        });
+
+        $('#gen').click(function() {
+            createOrders().then(driverPaths);
+            $('#removedOrder').text("");
+            return false;
+        });
+
+        $('#remove').click(function() {
+            removeRandomOrder().then(ordersList).then(driverPaths);
+            return false;
+        });
+
+    </script>
+
+    <p id="orderList"></p>
+</div>
+
+<div class="driverPath">
+    <h1>Delivery Path</h1>
+    <p id="driverPaths"></p>
+</div>
+
+<div class="removedOrder">
+    </b><p id="removedOrder"></p>
+</div>
+
+
+</body>
+
+
+</html>
